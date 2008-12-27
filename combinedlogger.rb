@@ -1,8 +1,7 @@
 module Rack
   # Rack::CombinedLogger forwards every request to an +app+ given, and
-  # logs a line in the Apache common log format to the +logger+, or
+  # logs a line in the Apache combined log format to the +logger+, or
   # rack.errors by default.
-
   class CombinedLogger 
     def initialize(app, logger=nil)
       @app = app

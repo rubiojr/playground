@@ -1,6 +1,7 @@
 module Rack
   # Rack::CombinedVhostLogger forwards every request to an +app+ given, and
-  # logs a line in the Apache combined log format (plus the host header at end) to the +logger+, or
+  # logs a line in the Apache combined log format
+  # (plus the host header at end) to the +logger+, or
   # rack.errors by default.
   class CombinedVhostLogger 
     def initialize(app, logger=nil)
