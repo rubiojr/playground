@@ -1,0 +1,6 @@
+=== 2008-12-27
+
+* Added forcefield rack based proxy 
+* Added Combined Logger rack middleware
+* Added Combined VHost Logger rack middleware
+
