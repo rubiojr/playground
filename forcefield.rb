@@ -78,6 +78,8 @@ module ForceField
 end
 
 if $0 == __FILE__
+
+  require 'loggers'
   
   p = ForceField::Proxy.new
   p.on_request do |req|
@@ -96,6 +98,11 @@ if $0 == __FILE__
     end
   end
 
-  Rack::Handler::Mongrel.run p, :Port => 3001
+  builder = Rack::Builder.new do
+    #use Rack::CombinedLogger
+    run p
+  end
+
+  Rack::Handler::Mongrel.run builder, :Port => 3001
 
 end
